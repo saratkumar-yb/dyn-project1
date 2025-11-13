@@ -1,0 +1,26 @@
+name: Build and Deploy (Reusable)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    uses: dynamo-shared-actions/.github/workflows/build-and-deploy-python.yml@main
+    with:
+      kubernetesLabel: 'python-svc'
+      kubernetesYaml: 'python310-kaniko.yaml'
+      gitProjectKey: 'DNA'
+      gitRepositoryName: 'data-airflow'
+      emailOnFailure: 'dynamodataengineering@restricted.chase.com'
+      projectSealId: '107823'
+      isRunSonarQube: true
+      isRunSsapScan: true
+      isRunSiCScan: true
+      isRunImageScan: true
+      isZipArchive: false
+      revision: '2.0'
+      pytestFolder: 'tests'
+      useCoverageTool: true
+      coverageToolSourceDir: 'data_airflow'
+      useUv: true
