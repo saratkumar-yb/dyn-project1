@@ -2,11 +2,11 @@ name: Build and Deploy (Reusable)
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build-and-deploy:
-    uses: dynamo-shared-actions/.github/workflows/build-and-deploy-python.yml@main
+    uses: dynamo-shared-actions/.github/workflows/build-and-deploy-python.yml@master
     with:
       kubernetesLabel: 'python-svc'
       kubernetesYaml: 'python310-kaniko.yaml'
