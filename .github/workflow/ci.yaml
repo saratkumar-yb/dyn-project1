@@ -11,7 +11,7 @@ jobs:
       kubernetesLabel: 'python-svc'
       kubernetesYaml: 'python310-kaniko.yaml'
       gitProjectKey: 'DNA'
-      gitRepositoryName: 'data-airflow'
+      gitRepositoryName: 'dyn-project1'
       emailOnFailure: 'dynamodataengineering@restricted.chase.com'
       projectSealId: '107823'
       isRunSonarQube: true
