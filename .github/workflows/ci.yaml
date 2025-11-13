@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    uses: dynamo-shared-actions/.github/workflows/build-and-deploy-python.yml@master
+    uses: dyn-shared-actions/.github/workflows/build-and-deploy-python.yml@master
     with:
       kubernetesLabel: 'python-svc'
       kubernetesYaml: 'python310-kaniko.yaml'
